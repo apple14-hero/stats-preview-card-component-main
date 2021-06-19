@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Stats preview card component</title>
+
+    <!-- styling of card-component -->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background: hsl(233, 47%, 7%);
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        position: relative;
+        top: 200px;
+      }
+
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      .container {
+        display: flex;
+        /* transform: translate(-50%, -50%); */
+        transform: translateY(25%);
+        margin-left: 50px;
+        margin-right: 50px;
+        border-radius: 20px;
+        /* flex-wrap: wrap; */
+      }
+
+      .card {
+        background: hsl(244, 38%, 16%);
+        height: 446px;
+        /* flex-basis */
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+
+      .child-container {
+        /* width: 300px; */
+        /* width: 250px; */
+        height: 180px;
+        display: flex;
+        justify-content: space-around;
+      }
+      .child-container .item {
+        /* align-content: space-around; */
+        /* justify-content: center; */
+        text-align: left;
+      }
+
+      .details {
+        width: 51%;
+        transform: translateX(25%);
+        margin-top: 50px;
+        margin-bottom: 60px;
+      }
+
+      /* .container .img {
+              z-index: -10;
+            } */
+      /* .container .img {
+        /* position: relative; */
+
+      /* &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%; */
+
+      h2,
+      h3 {
+        color: hsl(0, 0%, 100%);
+        font-size: 25px;
+        font-family: "Inter", sans-serif;
+      }
+      p {
+        color: hsla(0, 0%, 100%, 0.6);
+        font-size: 15px;
+        font-family: "Lexend Deca", sans-serif;
+      }
+      span {
+        color: hsl(277, 64%, 61%);
+      }
+
+
+      .img {
+        width: 50vw;
+      }
+      .child {
+        height: 100%;
+        background-image: linear-gradient(hsl(277, 64%, 61%,0.5) , hsl(277, 64%, 61%,0.5)), url(images/image-header-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        flex-basis: 100vw;
+      }
+
+        /* resposnive css */
+
+      @media screen and (min-width: 375px) and (max-width: 414px) {
+        .container {
+          flex-direction: column-reverse;
+          transform: translate(10%, -10px);
+          height: 100%;
+        }
+        .img {
+          width: 16.9em;
+          height: 13em;
+          transform: translate(-28px, 50px);
+        }
+
+        h3,
+        p {
+          text-align: center;
+        }
+
+        h2 {
+          width: 210px;
+          text-align: -webkit-center;
+          margin-left: -20px;
+        }
+        .details p {
+          width: 210px;
+          text-align: -webkit-center;
+          margin-left: -20px;
+          line-height: 1.5;
+        }
+        .card {
+          transform: translate(-28px, 46px);
+          border-top-left-radius: 0;
+          border-bottom-right-radius: 10px;
+          height: 560px;
+          width: 270px;
+        }
+
+        .details {
+          width: 50%;
+          margin: 0 20px 0 20px;
+        }
+        .child-container {
+          flex-wrap: wrap;
+          margin-top: 35px;
+        }
+        .child-container .item {
+          width: 100%;
+        }
+        .child-container .item h3,
+        p {
+          margin: 0;
+        }
+        .child-container .item-1 {
+          margin-bottom: 25px;
+        }
+
+        .child {
+          height: 100%;
+          width: 100%;
+          background-image: linear-gradient(hsl(277, 64%, 61%,0.5) , hsl(277, 64%, 61%,0.5)), url(images/image-header-mobile.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-top-right-radius: 10px;
+          border-top-left-radius: 10px;
+          border-bottom-right-radius: 0;
+          flex-basis: 100vw;
+        }
+
+        .attribution {
+          top: 120px;
+          color: #fff;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- card-component-main -->
+
+    <div class="container">
+      <div class="card">
+        <div class="details">
+          <h2>Get <span>insights</span> that help your business grow.</h2>
+          <p>
+            Discover the benefits of dataanalytics and make better decisions
+            regarding revenue, customer experience,and overall efficiency.
+          </p>
+        </div>
+        <div class="child-container">
+          <div class="item item-1">
+            <h3>10k+</h3>
+            <p>COMPANIES</p>
+          </div>
+          <div class="item item-1">
+            <h3>314</h3>
+            <p>TEMPLATES</p>
+          </div>
+          <div class="item item-1">
+            <h3>12M+</h3>
+            <p>QUERIES</p>
+          </div>
+        </div>
+      </div>
+      <div class="img">
+        <div class="child"></div>
+      </div>
+    </div>
+
+  <!-- footer -->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Atul Pal</a>.
+    </div>
+  </body>
+</html>
