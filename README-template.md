@@ -22,8 +22,8 @@ OUTPUT OF CHALLENGE IN THE GIVEN LOCATION : stats-preview-card-component-main\im
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution URL](https://github.com/apple14-hero/stats-preview-card-component-main.git)
+- Live Site URL: [live site URL](https://apple14-hero.github.io/stats-preview-card-component-main/)
 
 ## My process
 
